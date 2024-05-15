@@ -1,9 +1,9 @@
-:root{
-  --main-blue-color: #0153C0;
-  --main-sub-menu-border-color:#EAECF0;
-  --main-border:  solid remy(2) var(--main-blue-color);
-  --main-border-radius: remy(4);
-}
+  $main-blue-color: #0153C0;
+  $sub-menu-border: solid remy(1) #EAECF0;
+  $sub-menu-border-radius: remy(6);
+  $sub-menu-border-shadow: 0 remy(4) remy(6) #10182808 ;
+  $main-border: solid remy(2) $main-blue-color;
+
 
 @function remy($pxsize){
   @return calc(($pxsize)/16)+rem;
@@ -40,7 +40,7 @@ body {
   max-width: remy(1440);
   margin: 0 auto;
   min-height: remy(80);
-  border: solid remy(1) var(--main-sub-menu-border-color);
+  border: solid remy(1) #F2F4F7;
   padding: 0 remy(112);
 }
 
@@ -54,7 +54,6 @@ body {
 
 .menu__list {
   display: flex;
-  align-items: center;
   position: relative;
   gap: 0 remy(32);
 }
@@ -73,9 +72,9 @@ body {
 
 .user-actions__sign-up {
   padding: remy(8) remy(22);
-  color: var(--main-blue-color);
-  border: var(--main-border);
-  border-radius: var(--main-border-radius);
+  color: $main-blue-color;
+  border: solid remy(2) $main-blue-color;
+  border-radius: remy(4);
 }
 
 .user-actions__log-in {
@@ -111,33 +110,22 @@ body {
   position: absolute;
   padding: remy(32) remy(20) remy(20) remy(72);
   top: remy(52);
-  width: remy(336);
-  border-radius: remy(6);
-  box-shadow: 0 remy(4) remy(6) #10182808;
-  border: var(--main-border);
-  //display: none;
-}
-
-
-.sub-menu__list-solution {
-  left: remy(-95);
-}
-
-.sub-menu__list-support {
+  min-width: remy(336);
+  border-radius: $sub-menu-border-radius;
+  box-shadow: $sub-menu-border-shadow;
+  border: solid remy(1) #EAECF0;
   margin: 0 auto;
   left: 0;
   right: 0;
+  display: none;
 }
 
 .sub-menu__list-about {
   display: none;
   height: max-content;
-  width: remy(640);
+  min-width: remy(640);
   padding: remy(20);
   columns: 2;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
 }
 
 .sub-menu__list-about:hover {
@@ -147,12 +135,6 @@ body {
 .sub-menu__list-about li {
   background-clip: content-box;
   padding-left: remy(45);
-}
-
-.sub-menu__list-products{
-  margin: 0 auto;
-  left: 0;
-  right: 0;
 }
 
 .sub-menu__link {
