@@ -89,7 +89,7 @@ body {
 
 .header__inner {
   display: grid;
-  grid-template-columns: 5fr 8fr;
+  grid-template-columns: 2fr 8fr;
 }
 
 .slogan__header span {
