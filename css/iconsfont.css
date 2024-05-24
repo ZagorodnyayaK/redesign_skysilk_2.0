@@ -86,4 +86,5 @@
 .icon-arrow-header:after {
   content: "\e90a";
   border: solid 1px #0153C0;
+  margin-left: 13px;
 }

@@ -35,7 +35,7 @@ body {
   padding: 0 7rem;
 }
 
-.burger-label {
+.burger-label::after, .burger-label::before, .burger-label span {
   display: none;
 }
 
@@ -89,7 +89,14 @@ body {
 
 .header__inner {
   display: grid;
-  grid-template-columns: 2fr 8fr;
+  grid-template-columns: repeat(4, auto max-content);
+  column-gap: 2.5rem;
+}
+
+.slogan__header {
+  display: grid;
+  align-items: center;
+  justify-items: center;
 }
 
 .slogan__header span {
@@ -113,7 +120,8 @@ body {
 }
 
 .menu__list {
-  float: right;
+  display: flex;
+  gap: 0 32px;
 }
 
 .burger-label,
@@ -224,7 +232,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .menu__list {
+  .menu {
     display: none;
   }
 }
