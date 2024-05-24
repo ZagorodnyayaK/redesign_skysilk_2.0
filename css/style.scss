@@ -133,9 +133,9 @@ body {
 }
 
 .menu__list {
-  display: flex;
-  gap: 0 32px;
-
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 32px;
 }
 
 .burger-label,
@@ -161,7 +161,7 @@ body {
   top: remy(52);
   min-width: remy(336);
   border-radius: $sub-menu-border-radius;
-  box-shadow: $sub-menu-border-shadow;
+  box-shadow: 0 remy(4) remy(6) #10182808;
   border: solid remy(1) #EAECF0;
   margin: 0 auto;
   left: 0;
@@ -246,13 +246,25 @@ body {
 }
 
 @media (max-width: 768px) {
-  .menu {
+  .menu,
+  .slogan__header{
     display: none;
   }
 
+  .container{
+    border-bottom: solid 0.0625rem #f7f2f7;
+  }
 
   .burger-label::after, .burger-label::before, .burger-label span{
+display: block;
+  }
 
+  label::after, label::before, label span {
+    position: absolute;
+    width: 100%;
+    height: remy(2);
+    background-color: #344054;
+    transition: .3s;
   }
 }
 
