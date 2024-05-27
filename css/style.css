@@ -25,6 +25,10 @@ body {
   font-weight: 500;
 }
 
+.header {
+  position: fixed;
+}
+
 .container {
   display: grid;
   align-items: center;
@@ -153,45 +157,57 @@ body {
   margin: 0 auto;
   left: 0;
   right: 0;
-  display: none;
 }
 
-.sub-menu__list-about {
-  display: none;
-  height: max-content;
-  min-width: 40rem;
-  padding: 1.25rem;
-  columns: 2;
+.sub-menu__list-products {
+  display: grid;
+  column-gap: 0.5rem;
+  width: 20rem;
+  height: 31.25rem;
+  padding: 2rem 1.25rem 1.5rem 1.25rem;
 }
-
-.sub-menu__list-about:hover {
-  display: block;
+.sub-menu__list-products li {
+  margin-left: 3.25rem;
 }
-
-.sub-sub-menu__list {
-  display: none;
+.sub-menu__list-products li p {
+  width: 13.5rem;
 }
 
 .sub-sub-menu__list {
+  display: grid;
+  grid-template-columns: repeat(5, 4.25rem);
+  grid-auto-rows: auto;
+  column-gap: 2.375rem;
+  row-gap: 1.5625rem;
+  justify-content: center;
   position: absolute;
-  max-width: 33.8125rem;
+  width: 33.8125rem;
   height: 33.75rem;
-  top: 0;
+  top: 2.1875rem;
   left: 100%;
-  padding: 0 0 0;
+  padding: 2rem 1.5625rem;
+  border: solid 1px black;
+}
+.sub-sub-menu__list img {
+  height: 68px;
+  width: 68px;
+  border: solid 2px black;
+}
+.sub-sub-menu__list li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sub-sub-menu__list p {
+  font-size: 0.875rem;
 }
 
 .sub-menu__list > li:hover .sub-sub-menu__list {
   display: block;
 }
 
-.sub-sub-menu__list > ul {
-  display: flex;
-  flex-direction: column;
-  background: #F9FAFB;
-}
-
 .sub-menu__link {
+  position: relative;
   color: #101828;
   min-width: 10.625rem;
   display: inline-block;
@@ -241,14 +257,7 @@ body {
     border-bottom: solid 0.0625rem #f7f2f7;
   }
   .burger-label::after, .burger-label::before, .burger-label span {
-    display: block;
-  }
-  label::after, label::before, label span {
-    position: absolute;
-    width: 100%;
-    height: 0.125rem;
-    background-color: #344054;
-    transition: 0.3s;
+    display: inline;
   }
 }
 
