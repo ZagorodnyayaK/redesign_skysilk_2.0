@@ -159,6 +159,7 @@ body {
 }
 
 .sub-menu__list {
+  position: absolute;
   padding: remy(32) remy(20) remy(20) remy(72);
   top: remy(52);
   min-width: remy(336);
@@ -168,7 +169,7 @@ body {
   margin: 0 auto;
   left: 0;
   right: 0;
-  //display: none;
+  display: none;
 
 }
 
@@ -192,6 +193,8 @@ body {
   height: remy(500);
   padding: remy(32) remy(20) remy(24) remy(20);
 
+  display: none;
+
   li{
   margin-left: remy(52);
     p{
@@ -201,7 +204,7 @@ body {
 }
 
 .sub-sub-menu__list {
-  //display: none;
+  display: none;
 }
 
 .sub-sub-menu__list {
